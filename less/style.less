@@ -1,0 +1,100 @@
+/*------------------------------------------------------------------
+[Main Stylesheet]
+
+Project:	MLS Golazo Concept
+Version:	1.0.0
+
+1. Imports
+2. Typography
+3. Utilities
+4. Layout
+
+--------------------------------------------------------------------*/
+
+/* 1. Imports ------------------------------------------------------*/
+
+//vendor
+@import "vendor/reset";
+@import "vendor/font-awesome.less";
+@import "vendor/foundation.less";
+
+
+
+//specific
+@import "header.less";
+@import "hero.less";
+@import "content.less";
+@import "games.less";
+@import "trending.less";
+@import "social.less";
+@import "footer.less";
+@import "sidebar.less";
+
+
+//responsive
+@import "ipad.less";
+@import "mobile.less";
+
+
+
+
+
+/* 2. Typography  --------------------------------------------------*/
+
+@primary-font: "proxima-nova";
+@secondary-font: "refrigerator-deluxe";
+
+h1, h2 {
+	font-family: @secondary-font;
+}
+
+/* 3. Utilities -----------------------------------------------------*/
+
+@halfxpadding: 0.4688em;
+@1xpadding: 0.9375em;
+@2xpadding: 1.875em;
+
+
+@grey: #dadae5;
+@grey-1l: #E8E9F3;
+@grey-1d: #8e9fb2;
+@grey-2d: #384E68;
+
+@green: #7dc450;
+@blue: #1e333f;
+@blue-1d: #152731;
+@blue-1l: #2f3d4c;
+
+/* 4. Layout -------------------------------------------------------*/
+
+body {
+	background: @grey;
+	font-family: @primary-font;
+}
+
+#page {
+	margin: 0 auto;
+	max-width: 1480px;
+	background: #FFF;
+	min-height: 1200px;
+	background: #FFF;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		width: 0; 
+		height: 0; 
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 600px 1700px 0 1700px;
+		border-color: #FFF transparent transparent transparent;
+		content: '';
+		position: absolute;
+		top: 80px;
+		left: -960px;
+	}
+}
+
+hr {
+	border-top: 1px solid @grey-1l;
+}
