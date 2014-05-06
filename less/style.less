@@ -20,20 +20,6 @@ Version:	1.0.0
 
 
 
-//specific
-@import "header.less";
-@import "hero.less";
-@import "content.less";
-@import "games.less";
-@import "trending.less";
-@import "social.less";
-@import "footer.less";
-@import "sidebar.less";
-
-
-//responsive
-@import "ipad.less";
-@import "mobile.less";
 
 
 
@@ -50,10 +36,7 @@ h1, h2 {
 
 /* 3. Utilities -----------------------------------------------------*/
 
-@halfxpadding: 0.4688em;
-@1xpadding: 0.9375em;
-@2xpadding: 1.875em;
-
+@unit: 10px;
 
 @grey: #dadae5;
 @grey-1l: #E8E9F3;
@@ -73,28 +56,39 @@ body {
 }
 
 #page {
-	margin: 0 auto;
-	max-width: 1480px;
-	background: #FFF;
 	min-height: 1200px;
 	background: #FFF;
-	position: relative;
-	overflow: hidden;
-	&:before {
-		width: 0; 
-		height: 0; 
-		width: 0px;
-		height: 0px;
-		border-style: solid;
-		border-width: 600px 1700px 0 1700px;
-		border-color: #FFF transparent transparent transparent;
-		content: '';
-		position: absolute;
-		top: 80px;
-		left: -960px;
+}
+
+header {
+	background: @blue;
+	height: 100px;
+	h1 {
+		line-height: 100px;
+		color: #FFF;
+		text-align: center;
+		font-size: 48px;
+		font-weight: 400;
 	}
 }
 
-hr {
-	border-top: 1px solid @grey-1l;
+section {
+	padding: @unit*4;
+	h1 {
+		font-size: 24px;
+	}
+	ul {
+		list-style: none;
+		li {
+			padding: @unit;
+			.key {
+				font-weight: bold;
+			}
+		}
+	}
 }
+
+
+
+
+
